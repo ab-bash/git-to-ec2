@@ -21,4 +21,4 @@ jobs:
       
       - name: Deploy to EC2
         run:  |
-          ssh -o StrictHostKeyChecking=no ec2-user@${{ secrets.EC2_HOST }} "cd /var/www/html && git pull origin main && ./deploy.sh"
+          ssh -o StrictHostKeyChecking=no ec2-user@${{ secrets.EC2_HOST }} "cd /var/www/html && git pull origin main && ./git-to-ec2.sh"
